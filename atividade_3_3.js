@@ -1,4 +1,4 @@
-// Atividade 3.1 Por Willian Gonçalves
+// Atividade 3.3 Por Willian Gonçalves
 var produtos = [
     { nome: "Caneta", preco: 2.50 },
     { nome: "Caderno", preco: 15.00 },
