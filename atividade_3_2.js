@@ -1,4 +1,4 @@
-// Atividade 3.1 Por Willian Gonçalves
+// Atividade 3.2 Por Willian Gonçalves
 var readline = require('readline');
 
 var rl = readline.createInterface({
