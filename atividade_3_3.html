@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Atividade 3.3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 300px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        button {
+            padding: 8px 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h2>Tabela de Produtos</h2>
+    <table border="1" id="tabela-produtos">
+        <thead>
+            <tr>
+                <th>Produto</th>
+                <th>Valor (R$)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Caneta</td>
+                <td class="preco">2.50</td>
+            </tr>
+            <tr>
+                <td>Caderno</td>
+                <td class="preco">15.00</td>
+            </tr>
+            <tr>
+                <td>Borracha</td>
+                <td class="preco">1.20</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <button id="btnAumentar">Aumentar Preços em 10%</button>
+
+    <script>
+        
+        var botao = document.getElementById('btnAumentar');
+        
+       
+        botao.addEventListener('click', function() {
+            
+            var precos = document.getElementsByClassName('preco');
+            for (var i = 0; i < precos.length; i++) {
+                var elemento = precos[i];
+                var valorAtual = parseFloat(elemento.textContent);
+                var novoValor = valorAtual * 1.10; // Aumento de 10%
+                       
+                elemento.textContent = novoValor.toFixed(2);
+            }
+            botao.textContent = "Preços Atualizados!";
+            botao.style.backgroundColor = "#2196F3";
+            botao.disabled = true;
+        });
+    </script>
+</body>
+</html>

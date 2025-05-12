@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 3.1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        #resultado {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .numero {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            margin: 5px;
+            background-color: #3498db;
+            color: white;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Números Ímpares de 1 a 20</h1>
+    
+    <div>
+        <h3>Todos os números:</h3>
+        <div id="todosNumeros"></div>
+    </div>
+    
+    <div id="resultado">
+        <h3>Números ímpares:</h3>
+        <div id="numerosImpares"></div>
+    </div>
+    
+    <script>
+        
+        var numeros = [];
+        for (var i = 1; i <= 20; i++) {
+            numeros.push(i);
+        }
+        
+        
+        var todosElement = document.getElementById('todosNumeros');
+        for (var j = 0; j < numeros.length; j++) {
+            todosElement.innerHTML += '<span class="numero">' + numeros[j] + '</span>';
+        }
+        
+        
+        var imparesElement = document.getElementById('numerosImpares');
+        for (var k = 0; k < numeros.length; k++) {
+            if (numeros[k] % 2 === 1) {
+                imparesElement.innerHTML += '<span class="numero" style="background-color:#e74c3c">' + numeros[k] + '</span>';
+            }
+        }
+    </script>
+</body>
+</html>

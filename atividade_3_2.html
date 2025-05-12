@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Atividade 3.2</title>
+</head>
+<body>
+    <p id="mensagem">Texto original.</p>
+    <button id="botaoAlterar">Alterar Texto</button>
+
+    <script>
+      
+        var paragrafo = document.getElementById('mensagem');
+        var botao = document.getElementById('botaoAlterar');
+      
+        function alterarTexto() {
+            paragrafo.textContent = 'Texto alterado com sucesso!';
+            paragrafo.style.color = '#e74c3c'; // Muda a cor para vermelho
+            paragrafo.style.fontWeight = 'bold'; // Texto em negrito
+        }
+        
+        
+        botao.addEventListener('click', alterarTexto);
+        
+        
+    </script>
+</body>
+</html>
